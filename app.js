@@ -45,6 +45,7 @@ leftSlide.addEventListener("click", () => {
 let countIdx;
 if(localStorage["index"]){
     countIdx = localStorage.getItem("index");
+    countIdx = Number(countIdx);
 }
 else {countIdx = 0;}
 let counter = document.querySelector("#counter");
