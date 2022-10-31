@@ -27,7 +27,7 @@ rightSlide.addEventListener("click", () => {
         i++;
         img.src = imgArr[i];
         descr.textContent = descrArr[i];
-        price.textContent = priceArr[i];
+        price.textContent = `${priceArr[i]} Eth`;
     }
 });
 
@@ -36,10 +36,41 @@ leftSlide.addEventListener("click", () => {
         i--;
         img.src = imgArr[i];
         descr.textContent = descrArr[i];
-        price.textContent = priceArr[i];
+        price.textContent = `${priceArr[i]} Eth`;
     }
 });
 /* SLIDER END */
 
-/* SESSION STORAGE START */
-/* SESSION STORAGE END */
+/* ITEM COUNTER START */
+let countIdx;
+if(localStorage["index"]){
+    countIdx = localStorage.getItem("index");
+}
+else {countIdx = 0;}
+let counter = document.querySelector("#counter");
+counter.textContent = countIdx;
+/* ITEM COUNTER END */
+
+/* LOCAL STORAGE START */
+let nameArr = ["Red storm", "Blue Tempest", "Green Spark"];
+let artistArr = ["Luca Garau", "Luca Garau", "Luca Garau"];
+let cartArr = [];
+const addCart = document.querySelector("#descr button");
+addCart.addEventListener("click", () => {
+    if(localStorage["shopping"]){
+        let retrieving = localStorage["shopping"];
+        cartArr = JSON.parse(retrieving);
+    }
+    let itemCart = {
+        image: imgArr[i],
+        name: nameArr[i],
+        artist: artistArr[i],
+        price: priceArr[i]
+    };
+    cartArr.push(itemCart);
+    let stringifiedArr = JSON.stringify(cartArr);
+    localStorage.setItem("shopping",stringifiedArr);
+    countIdx += 1;
+    counter.textContent = countIdx;
+});
+/* LOCAL STORAGE END */
