@@ -501,6 +501,18 @@ footer {
     text-align: center;
     color:#3d898d;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+#ghub {
+    height: 30px;
+}
+
+footer > div {
+    width: 50%;
 }
 /* FOOTER END */
 
