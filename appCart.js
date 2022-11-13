@@ -175,17 +175,17 @@ eths.addEventListener("keyup", () => {
 /* NEWSFEED START */
 //DECLARING
 let newsArr = [
-    {image: "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/H8WuRINimqur8ud/finance-abstract-financial-background_sr2reankl_thumbnail-1080_01.png",
-    para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil minima eos similique adipisci recusandae? Deserunt, voluptas! Saepe provident reprehenderit eius itaque, quis totam, molestiae culpa sit earum distinctio at aperiam?",
-    title: "Title 1",
+    {image: "https://insidebitcoins.com/wp-content/uploads/2022/11/TANU-3.png",
+    para: "TANU (Treasure Area Needs U) Project NFTs have recorded a sharp rise in price since last Friday. The price average for the NFTs has risen from about $15K on Friday to about $152K on Monday, an 8x increase...",
+    title: "TANU NFT Price is Pumping",
     dot: document.querySelector("#dot1"),},
-    {image: "https://th.bing.com/th/id/R.e8e94cfb7eb1113e0b3333f25192b098?rik=fqTHOJ%2br2OiBAw&pid=ImgRaw&r=0",
-    para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil minima eos similique adipisci recusandae? Deserunt, voluptas! Saepe provident reprehenderit eius itaque, quis totam, molestiae culpa sit earum distinctio at aperiam?",
-    title: "Title 2",
+    {image: "https://th.bing.com/th/id/OIP.9L4cXbo452m276-Y7EAVGQHaFd?pid=ImgDet&rs=1",
+    para: "The Bored Ape Yacht Club (BAYC) is an exclusive community for holders of the ape and mutant themed NFT collections on Ethereum's blockchain. Commonly referred to as the Bored Apes, only 10,000 generative art....",
+    title: "Bored Ape Sold For $114.000",
     dot: document.querySelector("#dot2"),},
-    {image: "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/H8WuRINimqur8ud/global-economy-finance-background_b86pzpyq__d_thumbnail-1080_01.png",
-    para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil minima eos similique adipisci recusandae? Deserunt, voluptas! Saepe provident reprehenderit eius itaque, quis totam, molestiae culpa sit earum distinctio at aperiam?",
-    title: "Title 3",
+    {image: "https://4.bp.blogspot.com/-S0DVw_7mr9E/VpGzpa1i3cI/AAAAAAAAK7U/GijN7pCvlzg/s1600/Dewar%2527s%2B12%2Byear%2BBlended%2BScotch%2BWhisky.JPG",
+    para: "DEWAR’S® Scotch Whisky, the world’s most awarded blended Scotch whisky, has teamed up with BlockBar.com, the world’s first direct to consumer NFT marketplace for luxury wine and spirits, to release DEWAR’S...",
+    title: "DEWAR'S Scotch Launches NFT",
     dot: document.querySelector("#dot3"),}
 ];
 const imgNews = document.querySelector("#newsBox img");
@@ -195,13 +195,14 @@ let newsValue = () => {
     imgNews.src = newsArr[idx].image;
     titleNews.textContent = newsArr[idx].title;
     paraNews.textContent = newsArr[idx].para;
-    newsArr[idx].dot.style.backgroundColor = ("white");
+    newsArr[idx].dot.style.backgroundColor = ("#e2dddf");
     idx++;
 };
 let idx = 0;
 
-//AUTOMATED SLIDE NEWS
 newsValue();
+
+//AUTOMATED SLIDE NEWS
 let assignNews = () => {
     if(idx==newsArr.length){
         idx=0
